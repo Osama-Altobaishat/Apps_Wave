@@ -1,9 +1,6 @@
-using System.Security.Claims;
-using BookingApi.Data;
 using BookingApi.DTOs;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
-using Microsoft.EntityFrameworkCore;
 
 namespace BookingApi.Controllers;
 
@@ -12,11 +9,11 @@ namespace BookingApi.Controllers;
 [Authorize]
 public class UsersController : ControllerBase
 {
-    private readonly AppDbContext _db;
+    private readonly IUserService _userService;
 
-    public UsersController(AppDbContext db)
+    public UsersController(IUserService userService)
     {
-        _db = db;
+        _userService = userService;
     }
 
     // Admin view users
@@ -24,10 +21,7 @@ public class UsersController : ControllerBase
     [Authorize(Roles = "Admin")]
     public async Task<ActionResult<List<UserResponse>>> GetAll()
     {
-        var users = await _db.Users
-            .Select(u => new UserResponse(u.Id, u.FullName, u.Email, u.Role, u.IsActive, u.CreatedAt))
-            .ToListAsync();
-
+        var users = await _userService.GetAllAsync();
         return Ok(users);
     }
 
@@ -36,11 +30,10 @@ public class UsersController : ControllerBase
     [Authorize(Roles = "Admin")]
     public async Task<IActionResult> UpdateRole(int id, UpdateUserRoleRequest request)
     {
-        var user = await _db.Users.FindAsync(id);
-        if (user is null) return NotFound();
+        var result = await _userService.UpdateRoleAsync(id, request);
 
-        user.Role = request.Role;
-        await _db.SaveChangesAsync();
+        if (!result)
+            return NotFound();
 
         return NoContent();
     }

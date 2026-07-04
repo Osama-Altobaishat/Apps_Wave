@@ -31,24 +31,7 @@
         },
         "responses": {
           "200": {
-            "description": "OK",
-            "content": {
-              "text/plain": {
-                "schema": {
-                  "$ref": "#/components/schemas/AuthResponse"
-                }
-              },
-              "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/AuthResponse"
-                }
-              },
-              "text/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/AuthResponse"
-                }
-              }
-            }
+            "description": "OK"
           }
         }
       }
@@ -79,24 +62,7 @@
         },
         "responses": {
           "200": {
-            "description": "OK",
-            "content": {
-              "text/plain": {
-                "schema": {
-                  "$ref": "#/components/schemas/AuthResponse"
-                }
-              },
-              "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/AuthResponse"
-                }
-              },
-              "text/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/AuthResponse"
-                }
-              }
-            }
+            "description": "OK"
           }
         }
       }
@@ -139,33 +105,7 @@
         ],
         "responses": {
           "200": {
-            "description": "OK",
-            "content": {
-              "text/plain": {
-                "schema": {
-                  "type": "array",
-                  "items": {
-                    "$ref": "#/components/schemas/BookingResponse"
-                  }
-                }
-              },
-              "application/json": {
-                "schema": {
-                  "type": "array",
-                  "items": {
-                    "$ref": "#/components/schemas/BookingResponse"
-                  }
-                }
-              },
-              "text/json": {
-                "schema": {
-                  "type": "array",
-                  "items": {
-                    "$ref": "#/components/schemas/BookingResponse"
-                  }
-                }
-              }
-            }
+            "description": "OK"
           }
         }
       },
@@ -194,24 +134,7 @@
         },
         "responses": {
           "200": {
-            "description": "OK",
-            "content": {
-              "text/plain": {
-                "schema": {
-                  "$ref": "#/components/schemas/BookingResponse"
-                }
-              },
-              "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/BookingResponse"
-                }
-              },
-              "text/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/BookingResponse"
-                }
-              }
-            }
+            "description": "OK"
           }
         }
       }
@@ -234,72 +157,7 @@
         ],
         "responses": {
           "200": {
-            "description": "OK",
-            "content": {
-              "text/plain": {
-                "schema": {
-                  "$ref": "#/components/schemas/BookingResponse"
-                }
-              },
-              "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/BookingResponse"
-                }
-              },
-              "text/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/BookingResponse"
-                }
-              }
-            }
-          }
-        }
-      }
-    },
-    "/api/bookings/filter": {
-      "get": {
-        "tags": [
-          "Bookings"
-        ],
-        "parameters": [
-          {
-            "name": "resourceId",
-            "in": "query",
-            "schema": {
-              "type": "integer",
-              "format": "int32"
-            }
-          }
-        ],
-        "responses": {
-          "200": {
-            "description": "OK",
-            "content": {
-              "text/plain": {
-                "schema": {
-                  "type": "array",
-                  "items": {
-                    "$ref": "#/components/schemas/BookingResponseUser"
-                  }
-                }
-              },
-              "application/json": {
-                "schema": {
-                  "type": "array",
-                  "items": {
-                    "$ref": "#/components/schemas/BookingResponseUser"
-                  }
-                }
-              },
-              "text/json": {
-                "schema": {
-                  "type": "array",
-                  "items": {
-                    "$ref": "#/components/schemas/BookingResponseUser"
-                  }
-                }
-              }
-            }
+            "description": "OK"
           }
         }
       }
@@ -346,7 +204,7 @@
         }
       }
     },
-    "/api/bookings/Cancelled/{id}": {
+    "/api/bookings/cancel/{id}": {
       "put": {
         "tags": [
           "Bookings"
@@ -735,140 +593,10 @@
           }
         }
       }
-    },
-    "/api/users/{id}/deactivate": {
-      "put": {
-        "tags": [
-          "Users"
-        ],
-        "parameters": [
-          {
-            "name": "id",
-            "in": "path",
-            "required": true,
-            "schema": {
-              "type": "integer",
-              "format": "int32"
-            }
-          }
-        ],
-        "responses": {
-          "200": {
-            "description": "OK"
-          }
-        }
-      }
     }
   },
   "components": {
     "schemas": {
-      "AuthResponse": {
-        "type": "object",
-        "properties": {
-          "userId": {
-            "type": "integer",
-            "format": "int32"
-          },
-          "fullName": {
-            "type": "string",
-            "nullable": true
-          },
-          "email": {
-            "type": "string",
-            "nullable": true
-          },
-          "role": {
-            "$ref": "#/components/schemas/UserRole"
-          },
-          "accessToken": {
-            "type": "string",
-            "nullable": true
-          },
-          "accessTokenExpiresAt": {
-            "type": "string",
-            "format": "date-time"
-          },
-          "refreshToken": {
-            "type": "string",
-            "nullable": true
-          }
-        },
-        "additionalProperties": false
-      },
-      "BookingResponse": {
-        "type": "object",
-        "properties": {
-          "id": {
-            "type": "integer",
-            "format": "int32"
-          },
-          "userId": {
-            "type": "integer",
-            "format": "int32"
-          },
-          "userFullName": {
-            "type": "string",
-            "nullable": true
-          },
-          "resourceId": {
-            "type": "integer",
-            "format": "int32"
-          },
-          "resourceName": {
-            "type": "string",
-            "nullable": true
-          },
-          "startAt": {
-            "type": "string",
-            "format": "date-time"
-          },
-          "endAt": {
-            "type": "string",
-            "format": "date-time"
-          },
-          "status": {
-            "$ref": "#/components/schemas/BookingStatus"
-          },
-          "notes": {
-            "type": "string",
-            "nullable": true
-          },
-          "createdAt": {
-            "type": "string",
-            "format": "date-time"
-          }
-        },
-        "additionalProperties": false
-      },
-      "BookingResponseUser": {
-        "type": "object",
-        "properties": {
-          "id": {
-            "type": "integer",
-            "format": "int32"
-          },
-          "resourceId": {
-            "type": "integer",
-            "format": "int32"
-          },
-          "resourceName": {
-            "type": "string",
-            "nullable": true
-          },
-          "startAt": {
-            "type": "string",
-            "format": "date-time"
-          },
-          "endAt": {
-            "type": "string",
-            "format": "date-time"
-          },
-          "status": {
-            "$ref": "#/components/schemas/BookingStatus"
-          }
-        },
-        "additionalProperties": false
-      },
       "BookingStatus": {
         "enum": [
           0,

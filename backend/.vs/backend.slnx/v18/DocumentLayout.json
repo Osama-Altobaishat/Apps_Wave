@@ -3,52 +3,48 @@
   "WorkspaceRootPath": "D:\\Web_Pro\\Dixels\\backend\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{5FD35445-C5D9-C7CC-C111-8A5833BA1DF5}|WebApplication1\\backend.csproj|d:\\web_pro\\dixels\\backend\\webapplication1\\models\\user.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{5FD35445-C5D9-C7CC-C111-8A5833BA1DF5}|WebApplication1\\backend.csproj|solutionrelative:webapplication1\\models\\user.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{5FD35445-C5D9-C7CC-C111-8A5833BA1DF5}|WebApplication1\\backend.csproj|d:\\web_pro\\dixels\\backend\\webapplication1\\unit_test\\userservicetests .cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{5FD35445-C5D9-C7CC-C111-8A5833BA1DF5}|WebApplication1\\backend.csproj|solutionrelative:webapplication1\\unit_test\\userservicetests .cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{5FD35445-C5D9-C7CC-C111-8A5833BA1DF5}|WebApplication1\\backend.csproj|d:\\web_pro\\dixels\\backend\\webapplication1\\models\\resource.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{5FD35445-C5D9-C7CC-C111-8A5833BA1DF5}|WebApplication1\\backend.csproj|solutionrelative:webapplication1\\models\\resource.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{5FD35445-C5D9-C7CC-C111-8A5833BA1DF5}|WebApplication1\\backend.csproj|d:\\web_pro\\dixels\\backend\\webapplication1\\unit_test\\resourceservicetests.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{5FD35445-C5D9-C7CC-C111-8A5833BA1DF5}|WebApplication1\\backend.csproj|solutionrelative:webapplication1\\unit_test\\resourceservicetests.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{5FD35445-C5D9-C7CC-C111-8A5833BA1DF5}|WebApplication1\\backend.csproj|d:\\web_pro\\dixels\\backend\\webapplication1\\models\\booking.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{5FD35445-C5D9-C7CC-C111-8A5833BA1DF5}|WebApplication1\\backend.csproj|solutionrelative:webapplication1\\models\\booking.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{5FD35445-C5D9-C7CC-C111-8A5833BA1DF5}|WebApplication1\\backend.csproj|d:\\web_pro\\dixels\\backend\\webapplication1\\unit_test\\bookingservicetests.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{5FD35445-C5D9-C7CC-C111-8A5833BA1DF5}|WebApplication1\\backend.csproj|solutionrelative:webapplication1\\unit_test\\bookingservicetests.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{5FD35445-C5D9-C7CC-C111-8A5833BA1DF5}|WebApplication1\\backend.csproj|d:\\web_pro\\dixels\\backend\\webapplication1\\controllers\\authcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{5FD35445-C5D9-C7CC-C111-8A5833BA1DF5}|WebApplication1\\backend.csproj|solutionrelative:webapplication1\\controllers\\authcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{5FD35445-C5D9-C7CC-C111-8A5833BA1DF5}|WebApplication1\\backend.csproj|d:\\web_pro\\dixels\\backend\\webapplication1\\controllers\\userscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{5FD35445-C5D9-C7CC-C111-8A5833BA1DF5}|WebApplication1\\backend.csproj|solutionrelative:webapplication1\\controllers\\userscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{5FD35445-C5D9-C7CC-C111-8A5833BA1DF5}|WebApplication1\\backend.csproj|d:\\web_pro\\dixels\\backend\\webapplication1\\controllers\\resourcescontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{5FD35445-C5D9-C7CC-C111-8A5833BA1DF5}|WebApplication1\\backend.csproj|solutionrelative:webapplication1\\controllers\\resourcescontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{5FD35445-C5D9-C7CC-C111-8A5833BA1DF5}|WebApplication1\\backend.csproj|d:\\web_pro\\dixels\\backend\\webapplication1\\dtos\\resourcedtos.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{5FD35445-C5D9-C7CC-C111-8A5833BA1DF5}|WebApplication1\\backend.csproj|solutionrelative:webapplication1\\dtos\\resourcedtos.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{5FD35445-C5D9-C7CC-C111-8A5833BA1DF5}|WebApplication1\\backend.csproj|d:\\web_pro\\dixels\\backend\\webapplication1\\unit_test\\authservicetests.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{5FD35445-C5D9-C7CC-C111-8A5833BA1DF5}|WebApplication1\\backend.csproj|solutionrelative:webapplication1\\unit_test\\authservicetests.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{5FD35445-C5D9-C7CC-C111-8A5833BA1DF5}|WebApplication1\\backend.csproj|d:\\web_pro\\dixels\\backend\\webapplication1\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{5FD35445-C5D9-C7CC-C111-8A5833BA1DF5}|WebApplication1\\backend.csproj|solutionrelative:webapplication1\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{5FD35445-C5D9-C7CC-C111-8A5833BA1DF5}|WebApplication1\\backend.csproj|d:\\web_pro\\dixels\\backend\\webapplication1\\controllers\\bookingscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{5FD35445-C5D9-C7CC-C111-8A5833BA1DF5}|WebApplication1\\backend.csproj|solutionrelative:webapplication1\\controllers\\bookingscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{5FD35445-C5D9-C7CC-C111-8A5833BA1DF5}|WebApplication1\\backend.csproj|d:\\web_pro\\dixels\\backend\\webapplication1\\controllers\\resourcescontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{5FD35445-C5D9-C7CC-C111-8A5833BA1DF5}|WebApplication1\\backend.csproj|solutionrelative:webapplication1\\controllers\\resourcescontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{5FD35445-C5D9-C7CC-C111-8A5833BA1DF5}|WebApplication1\\backend.csproj|d:\\web_pro\\dixels\\backend\\webapplication1\\dtos\\bookingdtos.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{5FD35445-C5D9-C7CC-C111-8A5833BA1DF5}|WebApplication1\\backend.csproj|solutionrelative:webapplication1\\dtos\\bookingdtos.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{5FD35445-C5D9-C7CC-C111-8A5833BA1DF5}|WebApplication1\\backend.csproj|d:\\web_pro\\dixels\\backend\\webapplication1\\services\\resourceservice .cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{5FD35445-C5D9-C7CC-C111-8A5833BA1DF5}|WebApplication1\\backend.csproj|solutionrelative:webapplication1\\services\\resourceservice .cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{5FD35445-C5D9-C7CC-C111-8A5833BA1DF5}|WebApplication1\\backend.csproj|d:\\web_pro\\dixels\\backend\\webapplication1\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
-      "RelativeMoniker": "D:0:0:{5FD35445-C5D9-C7CC-C111-8A5833BA1DF5}|WebApplication1\\backend.csproj|solutionrelative:webapplication1\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+      "AbsoluteMoniker": "D:0:0:{5FD35445-C5D9-C7CC-C111-8A5833BA1DF5}|WebApplication1\\backend.csproj|d:\\web_pro\\dixels\\backend\\webapplication1\\services\\interfaces\\iresourceservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{5FD35445-C5D9-C7CC-C111-8A5833BA1DF5}|WebApplication1\\backend.csproj|solutionrelative:webapplication1\\services\\interfaces\\iresourceservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{5FD35445-C5D9-C7CC-C111-8A5833BA1DF5}|WebApplication1\\backend.csproj|d:\\web_pro\\dixels\\backend\\webapplication1\\backend.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|",
-      "RelativeMoniker": "D:0:0:{5FD35445-C5D9-C7CC-C111-8A5833BA1DF5}|WebApplication1\\backend.csproj|solutionrelative:webapplication1\\backend.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|"
+      "AbsoluteMoniker": "D:0:0:{5FD35445-C5D9-C7CC-C111-8A5833BA1DF5}|WebApplication1\\backend.csproj|d:\\web_pro\\dixels\\backend\\webapplication1\\controllers\\userscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{5FD35445-C5D9-C7CC-C111-8A5833BA1DF5}|WebApplication1\\backend.csproj|solutionrelative:webapplication1\\controllers\\userscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{5FD35445-C5D9-C7CC-C111-8A5833BA1DF5}|WebApplication1\\backend.csproj|d:\\web_pro\\dixels\\backend\\webapplication1\\services\\userservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{5FD35445-C5D9-C7CC-C111-8A5833BA1DF5}|WebApplication1\\backend.csproj|solutionrelative:webapplication1\\services\\userservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{5FD35445-C5D9-C7CC-C111-8A5833BA1DF5}|WebApplication1\\backend.csproj|d:\\web_pro\\dixels\\backend\\webapplication1\\services\\interfaces\\iuserservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{5FD35445-C5D9-C7CC-C111-8A5833BA1DF5}|WebApplication1\\backend.csproj|solutionrelative:webapplication1\\services\\interfaces\\iuserservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -62,13 +58,13 @@
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 7,
+              "DocumentIndex": 4,
               "Title": "Program.cs",
               "DocumentMoniker": "D:\\Web_Pro\\Dixels\\backend\\WebApplication1\\Program.cs",
               "RelativeDocumentMoniker": "WebApplication1\\Program.cs",
               "ToolTip": "D:\\Web_Pro\\Dixels\\backend\\WebApplication1\\Program.cs",
               "RelativeToolTip": "WebApplication1\\Program.cs",
-              "ViewState": "AgIAAGgAAAAAAAAAAAAQwHIAAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAAAgAAAAAAAAAAAAzwBQAAABAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2026-07-02T12:09:59.331Z",
               "IsPinned": true,
@@ -76,93 +72,28 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
-              "Title": "UsersController.cs",
-              "DocumentMoniker": "D:\\Web_Pro\\Dixels\\backend\\WebApplication1\\Controllers\\UsersController.cs",
-              "RelativeDocumentMoniker": "WebApplication1\\Controllers\\UsersController.cs",
-              "ToolTip": "D:\\Web_Pro\\Dixels\\backend\\WebApplication1\\Controllers\\UsersController.cs",
-              "RelativeToolTip": "WebApplication1\\Controllers\\UsersController.cs",
-              "ViewState": "AgIAACcAAAAAAAAAAAAAAC0AAAAFAAAAAAAAAA==",
+              "DocumentIndex": 2,
+              "Title": "BookingServiceTests.cs",
+              "DocumentMoniker": "D:\\Web_Pro\\Dixels\\backend\\WebApplication1\\Unit_test\\BookingServiceTests.cs",
+              "RelativeDocumentMoniker": "WebApplication1\\Unit_test\\BookingServiceTests.cs",
+              "ToolTip": "D:\\Web_Pro\\Dixels\\backend\\WebApplication1\\Unit_test\\BookingServiceTests.cs",
+              "RelativeToolTip": "WebApplication1\\Unit_test\\BookingServiceTests.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-07-02T11:36:19.867Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "AuthController.cs",
-              "DocumentMoniker": "D:\\Web_Pro\\Dixels\\backend\\WebApplication1\\Controllers\\AuthController.cs",
-              "RelativeDocumentMoniker": "WebApplication1\\Controllers\\AuthController.cs",
-              "ToolTip": "D:\\Web_Pro\\Dixels\\backend\\WebApplication1\\Controllers\\AuthController.cs",
-              "RelativeToolTip": "WebApplication1\\Controllers\\AuthController.cs",
-              "ViewState": "AgIAAA4AAAAAAAAAAAAUwBoAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-07-02T09:55:19.693Z",
+              "WhenOpened": "2026-07-04T16:51:27.341Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 1,
-              "Title": "Resource.cs",
-              "DocumentMoniker": "D:\\Web_Pro\\Dixels\\backend\\WebApplication1\\Models\\Resource.cs",
-              "RelativeDocumentMoniker": "WebApplication1\\Models\\Resource.cs",
-              "ToolTip": "D:\\Web_Pro\\Dixels\\backend\\WebApplication1\\Models\\Resource.cs",
-              "RelativeToolTip": "WebApplication1\\Models\\Resource.cs",
-              "ViewState": "AgIAAAUAAAAAAAAAAAA0wBAAAAAAAAAAAAAAAA==",
+              "Title": "ResourceServiceTests.cs",
+              "DocumentMoniker": "D:\\Web_Pro\\Dixels\\backend\\WebApplication1\\Unit_test\\ResourceServiceTests.cs",
+              "RelativeDocumentMoniker": "WebApplication1\\Unit_test\\ResourceServiceTests.cs",
+              "ToolTip": "D:\\Web_Pro\\Dixels\\backend\\WebApplication1\\Unit_test\\ResourceServiceTests.cs",
+              "RelativeToolTip": "WebApplication1\\Unit_test\\ResourceServiceTests.cs",
+              "ViewState": "AgIAAMQAAAAAAAAAAAAkwAkAAAA8AAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-07-02T09:47:25.894Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 6,
-              "Title": "ResourceDtos.cs",
-              "DocumentMoniker": "D:\\Web_Pro\\Dixels\\backend\\WebApplication1\\DTOs\\ResourceDtos.cs",
-              "RelativeDocumentMoniker": "WebApplication1\\DTOs\\ResourceDtos.cs",
-              "ToolTip": "D:\\Web_Pro\\Dixels\\backend\\WebApplication1\\DTOs\\ResourceDtos.cs",
-              "RelativeToolTip": "WebApplication1\\DTOs\\ResourceDtos.cs",
-              "ViewState": "AgIAAAQAAAAAAAAAAAAswBAAAAARAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-07-02T11:30:26.903Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 8,
-              "Title": "BookingsController.cs",
-              "DocumentMoniker": "D:\\Web_Pro\\Dixels\\backend\\WebApplication1\\Controllers\\BookingsController.cs",
-              "RelativeDocumentMoniker": "WebApplication1\\Controllers\\BookingsController.cs",
-              "ToolTip": "D:\\Web_Pro\\Dixels\\backend\\WebApplication1\\Controllers\\BookingsController.cs",
-              "RelativeToolTip": "WebApplication1\\Controllers\\BookingsController.cs",
-              "ViewState": "AgIAACkAAAAAAAAAAAAgwIkAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-07-02T10:40:23.582Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "User.cs",
-              "DocumentMoniker": "D:\\Web_Pro\\Dixels\\backend\\WebApplication1\\Models\\User.cs",
-              "RelativeDocumentMoniker": "WebApplication1\\Models\\User.cs",
-              "ToolTip": "D:\\Web_Pro\\Dixels\\backend\\WebApplication1\\Models\\User.cs",
-              "RelativeToolTip": "WebApplication1\\Models\\User.cs",
-              "ViewState": "AgIAABQAAAAAAAAAAAAUwBwAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-07-01T19:34:52.093Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "Booking.cs",
-              "DocumentMoniker": "D:\\Web_Pro\\Dixels\\backend\\WebApplication1\\Models\\Booking.cs",
-              "RelativeDocumentMoniker": "WebApplication1\\Models\\Booking.cs",
-              "ToolTip": "D:\\Web_Pro\\Dixels\\backend\\WebApplication1\\Models\\Booking.cs",
-              "RelativeToolTip": "WebApplication1\\Models\\Booking.cs",
-              "ViewState": "AgIAABYAAAAAAAAAAAAkwAYAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-07-01T19:34:20.043Z",
+              "WhenOpened": "2026-07-04T16:49:46.702Z",
               "EditorCaption": ""
             },
             {
@@ -173,47 +104,101 @@
               "RelativeDocumentMoniker": "WebApplication1\\Controllers\\ResourcesController.cs",
               "ToolTip": "D:\\Web_Pro\\Dixels\\backend\\WebApplication1\\Controllers\\ResourcesController.cs",
               "RelativeToolTip": "WebApplication1\\Controllers\\ResourcesController.cs",
-              "ViewState": "AgIAAA4AAAAAAAAAAAAUwHsAAAAqAAAAAAAAAA==",
+              "ViewState": "AgIAAEgAAAAAAAAAAAA0wF0AAAABAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-07-02T15:24:48.263Z",
+              "WhenOpened": "2026-07-04T16:45:22.949Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "ResourceService .cs",
+              "DocumentMoniker": "D:\\Web_Pro\\Dixels\\backend\\WebApplication1\\Services\\ResourceService .cs",
+              "RelativeDocumentMoniker": "WebApplication1\\Services\\ResourceService .cs",
+              "ToolTip": "D:\\Web_Pro\\Dixels\\backend\\WebApplication1\\Services\\ResourceService .cs",
+              "RelativeToolTip": "WebApplication1\\Services\\ResourceService .cs",
+              "ViewState": "AgIAAGkAAAAAAAAAAAAUwH4AAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-07-04T16:45:07.97Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "IResourceService.cs",
+              "DocumentMoniker": "D:\\Web_Pro\\Dixels\\backend\\WebApplication1\\Services\\Interfaces\\IResourceService.cs",
+              "RelativeDocumentMoniker": "WebApplication1\\Services\\Interfaces\\IResourceService.cs",
+              "ToolTip": "D:\\Web_Pro\\Dixels\\backend\\WebApplication1\\Services\\Interfaces\\IResourceService.cs",
+              "RelativeToolTip": "WebApplication1\\Services\\Interfaces\\IResourceService.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAsAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-07-04T16:44:46.011Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "UserServiceTests .cs",
+              "DocumentMoniker": "D:\\Web_Pro\\Dixels\\backend\\WebApplication1\\Unit_test\\UserServiceTests .cs",
+              "RelativeDocumentMoniker": "WebApplication1\\Unit_test\\UserServiceTests .cs",
+              "ToolTip": "D:\\Web_Pro\\Dixels\\backend\\WebApplication1\\Unit_test\\UserServiceTests .cs",
+              "RelativeToolTip": "WebApplication1\\Unit_test\\UserServiceTests .cs",
+              "ViewState": "AgIAAAMAAAAAAAAAAAAAAFsAAAAZAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-07-04T16:39:09.077Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "AuthServiceTests.cs",
+              "DocumentMoniker": "D:\\Web_Pro\\Dixels\\backend\\WebApplication1\\Unit_test\\AuthServiceTests.cs",
+              "RelativeDocumentMoniker": "WebApplication1\\Unit_test\\AuthServiceTests.cs",
+              "ToolTip": "D:\\Web_Pro\\Dixels\\backend\\WebApplication1\\Unit_test\\AuthServiceTests.cs",
+              "RelativeToolTip": "WebApplication1\\Unit_test\\AuthServiceTests.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-07-04T16:27:04.184Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "UsersController.cs",
+              "DocumentMoniker": "D:\\Web_Pro\\Dixels\\backend\\WebApplication1\\Controllers\\UsersController.cs",
+              "RelativeDocumentMoniker": "WebApplication1\\Controllers\\UsersController.cs",
+              "ToolTip": "D:\\Web_Pro\\Dixels\\backend\\WebApplication1\\Controllers\\UsersController.cs",
+              "RelativeToolTip": "WebApplication1\\Controllers\\UsersController.cs",
+              "ViewState": "AgIAABIAAAAAAAAAAAAUwB8AAAAFAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-07-04T16:37:21.374Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 9,
-              "Title": "BookingDtos.cs",
-              "DocumentMoniker": "D:\\Web_Pro\\Dixels\\backend\\WebApplication1\\DTOs\\BookingDtos.cs",
-              "RelativeDocumentMoniker": "WebApplication1\\DTOs\\BookingDtos.cs",
-              "ToolTip": "D:\\Web_Pro\\Dixels\\backend\\WebApplication1\\DTOs\\BookingDtos.cs",
-              "RelativeToolTip": "WebApplication1\\DTOs\\BookingDtos.cs",
-              "ViewState": "AgIAABMAAAAAAAAAAAAzwB4AAAAEAAAAAAAAAA==",
+              "Title": "UserService.cs",
+              "DocumentMoniker": "D:\\Web_Pro\\Dixels\\backend\\WebApplication1\\Services\\UserService.cs",
+              "RelativeDocumentMoniker": "WebApplication1\\Services\\UserService.cs",
+              "ToolTip": "D:\\Web_Pro\\Dixels\\backend\\WebApplication1\\Services\\UserService.cs",
+              "RelativeToolTip": "WebApplication1\\Services\\UserService.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAACgAAAABAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-07-03T15:21:02.061Z",
+              "WhenOpened": "2026-07-04T16:36:54.824Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 10,
-              "Title": "appsettings.json",
-              "DocumentMoniker": "D:\\Web_Pro\\Dixels\\backend\\WebApplication1\\appsettings.json",
-              "RelativeDocumentMoniker": "WebApplication1\\appsettings.json",
-              "ToolTip": "D:\\Web_Pro\\Dixels\\backend\\WebApplication1\\appsettings.json",
-              "RelativeToolTip": "WebApplication1\\appsettings.json",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAwAAAAGAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
-              "WhenOpened": "2026-07-01T19:30:46.485Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 11,
-              "Title": "backend.csproj",
-              "DocumentMoniker": "D:\\Web_Pro\\Dixels\\backend\\WebApplication1\\backend.csproj",
-              "RelativeDocumentMoniker": "WebApplication1\\backend.csproj",
-              "ToolTip": "D:\\Web_Pro\\Dixels\\backend\\WebApplication1\\backend.csproj",
-              "RelativeToolTip": "WebApplication1\\backend.csproj",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABQAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
-              "WhenOpened": "2026-07-02T10:35:20.463Z"
+              "Title": "IUserService.cs",
+              "DocumentMoniker": "D:\\Web_Pro\\Dixels\\backend\\WebApplication1\\Services\\Interfaces\\IUserService.cs",
+              "RelativeDocumentMoniker": "WebApplication1\\Services\\Interfaces\\IUserService.cs",
+              "ToolTip": "D:\\Web_Pro\\Dixels\\backend\\WebApplication1\\Services\\Interfaces\\IUserService.cs",
+              "RelativeToolTip": "WebApplication1\\Services\\Interfaces\\IUserService.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAYAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-07-04T16:36:35.071Z",
+              "EditorCaption": ""
             }
           ]
         }

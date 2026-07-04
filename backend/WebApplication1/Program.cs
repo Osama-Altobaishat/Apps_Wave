@@ -1,4 +1,5 @@
 using System.Text;
+using backend.Services.Interfaces;
 using BookingApi.Data;
 using BookingApi.Services;
 using Microsoft.AspNetCore.Authentication.JwtBearer;
@@ -14,6 +15,10 @@ builder.Services.AddDbContext<AppDbContext>(options =>
 
 // ---------- Services ----------
 builder.Services.AddScoped<ITokenService, TokenService>();
+builder.Services.AddScoped<IAuthService, AuthService>();
+builder.Services.AddScoped<IBookingService, BookingService>();
+builder.Services.AddScoped<IUserService, UserService>();
+builder.Services.AddScoped<IResourceService, ResourceService>();
 
 // ---------- Authentication (JWT Bearer) ----------
 var jwtSection = builder.Configuration.GetSection("Jwt");

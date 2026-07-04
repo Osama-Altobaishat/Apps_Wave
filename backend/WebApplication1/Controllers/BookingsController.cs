@@ -1,163 +1,79 @@
-using System.Security.Claims;
-using BookingApi.Data;
 using BookingApi.DTOs;
 using BookingApi.Models;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
-using Microsoft.EntityFrameworkCore;
-using System.Data;
-namespace BookingApi.Controllers;
+using System.Security.Claims;
 
 [ApiController]
 [Route("api/bookings")]
 [Authorize]
 public class BookingsController : ControllerBase
 {
-    private readonly AppDbContext _db;
+    private readonly IBookingService _service;
 
-    public BookingsController(AppDbContext db)
+    public BookingsController(IBookingService service)
     {
-        _db = db;
+        _service = service;
     }
 
-    private int CurrentUserId => int.Parse(User.FindFirstValue(ClaimTypes.NameIdentifier)!);
-    private bool IsStaff => User.IsInRole("Admin");
+    private int CurrentUserId =>
+        int.Parse(User.FindFirstValue(ClaimTypes.NameIdentifier)!);
 
-    //Admin Dashboard
+    private bool IsAdmin => User.IsInRole("Admin");
+
     [HttpGet]
     [Authorize(Roles = "Admin")]
-    public async Task<ActionResult<List<BookingResponse>>> GetAll()
+    public async Task<IActionResult> GetAll()
     {
-        var query = _db.Bookings
-            .Include(b => b.User)
-            .Include(b => b.Resource)
-            .AsQueryable();
-
-        if (!IsStaff)
-            query = query.Where(b => b.UserId == CurrentUserId);
-
-        var bookings = await query
-            .Select(b => new BookingResponse(
-                b.Id, b.UserId, b.User!.FullName, b.ResourceId, b.Resource!.Name,
-                b.StartAt, b.EndAt, b.Status, b.Notes, b.CreatedAt))
-            .ToListAsync();
-
-        return Ok(bookings);
+        var result = await _service.GetAllAsync(CurrentUserId, IsAdmin);
+        return Ok(result);
     }
 
     [HttpGet("{id:int}")]
     [Authorize(Roles = "Admin")]
-    public async Task<ActionResult<BookingResponse>> GetById(int id)
+    public async Task<IActionResult> GetById(int id)
     {
-        var b = await _db.Bookings.Include(x => x.User).Include(x => x.Resource)
-            .FirstOrDefaultAsync(x => x.Id == id);
+        var result = await _service.GetByIdAsync(id, CurrentUserId, IsAdmin);
 
-        if (b is null) return NotFound();
-        if (!IsStaff && b.UserId != CurrentUserId) return Forbid();
-
-        return Ok(new BookingResponse(
-            b.Id, b.UserId, b.User!.FullName, b.ResourceId, b.Resource!.Name,
-            b.StartAt, b.EndAt, b.Status, b.Notes, b.CreatedAt));
-    }
-
-    [HttpGet("filter")]
-    [Authorize(Roles = "User")]
-    public async Task<ActionResult<List<BookingResponseUser>>> GetAll([FromQuery] int? resourceId = null)
-    {
-
-        Console.WriteLine(resourceId);
-        Console.WriteLine("___________________________");
-        var query = _db.Bookings
-            .Include(b => b.Resource)
-            .AsQueryable();
-
-        if (resourceId.HasValue)
-            query = query.Where(b => b.ResourceId == resourceId.Value);
-
-        var result = await query
-            .OrderByDescending(b => b.StartAt)
-            .Select(b => new BookingResponseUser(
-                b.Id,
-                b.ResourceId,
-                b.Resource!.Name,
-                b.StartAt,
-                b.EndAt,
-                b.Status
-            ))
-            .ToListAsync();
+        if (result is null)
+            return NotFound();
 
         return Ok(result);
     }
 
-    // User booking
     [HttpPost]
     [Authorize(Roles = "User")]
-    public async Task<ActionResult<BookingResponse>> Create(CreateBookingRequest request)
+    public async Task<IActionResult> Create(CreateBookingRequest request)
     {
-        if (request.EndAt <= request.StartAt)
-            return BadRequest(new { message = "The end time must be after the start time." });
+        var result = await _service.CreateAsync(CurrentUserId, request);
 
-        await using var transaction = await _db.Database.BeginTransactionAsync(IsolationLevel.Serializable);
+        if (!result.Success)
+            return BadRequest(new { message = result.Error });
 
-        var resource = await _db.Resources.FindAsync(request.ResourceId);
-        if (resource is null || !resource.IsActive)
-            return NotFound(new { message = "The resource does not exist or is unavailable." });
-
-        var hasOverlap = await _db.Bookings.AnyAsync(b =>
-            b.ResourceId == request.ResourceId &&
-            b.Status != BookingStatus.Cancelled &&
-            request.StartAt < b.EndAt &&
-            request.EndAt > b.StartAt);
-
-        if (hasOverlap)
-            return Conflict(new { message = "This resource is already booked at this time." });
-
-        var booking = new Booking
-        {
-            UserId = CurrentUserId,
-            ResourceId = request.ResourceId,
-            StartAt = request.StartAt,
-            EndAt = request.EndAt,
-            Notes = request.Notes,
-            Status = BookingStatus.Pending
-        };
-
-        _db.Bookings.Add(booking);
-        await _db.SaveChangesAsync();
-
-        var user = await _db.Users.FindAsync(CurrentUserId);
-        var response = new BookingResponse(
-            booking.Id, booking.UserId, user!.FullName, booking.ResourceId, resource.Name,
-            booking.StartAt, booking.EndAt, booking.Status, booking.Notes, booking.CreatedAt);
-
-        return CreatedAtAction(nameof(GetById), new { id = booking.Id }, response);
+        return CreatedAtAction(nameof(GetById),
+            new { id = result.Data!.Id },
+            result.Data);
     }
 
-
-    // Admin status
     [HttpPut("status/{id:int}")]
     [Authorize(Roles = "Admin")]
     public async Task<IActionResult> UpdateStatus(int id, UpdateBookingStatusRequest request)
     {
-        var booking = await _db.Bookings.FindAsync(id);
-        if (booking is null) return NotFound();
+        var ok = await _service.UpdateStatusAsync(id, request.Status);
 
-        booking.Status = request.Status;
-        await _db.SaveChangesAsync();
+        if (!ok) return NotFound();
+
         return NoContent();
     }
 
-    // Cancelled
-    [HttpPut("Cancelled/{id:int}")]
+    [HttpPut("cancel/{id:int}")]
     [Authorize(Roles = "User")]
     public async Task<IActionResult> Cancel(int id)
     {
-        var booking = await _db.Bookings.FindAsync(id);
-        if (booking is null) return NotFound();
-        if (!IsStaff && booking.UserId != CurrentUserId) return Forbid();
+        var ok = await _service.CancelAsync(id, CurrentUserId, IsAdmin);
 
-        booking.Status = BookingStatus.Cancelled;
-        await _db.SaveChangesAsync();
+        if (!ok) return NotFound();
+
         return NoContent();
     }
 }

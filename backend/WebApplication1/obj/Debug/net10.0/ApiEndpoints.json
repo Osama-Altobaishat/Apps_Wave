@@ -13,17 +13,7 @@
         "IsRequired": true
       }
     ],
-    "ReturnTypes": [
-      {
-        "Type": "BookingApi.DTOs.AuthResponse",
-        "MediaTypes": [
-          "text/plain",
-          "application/json",
-          "text/json"
-        ],
-        "StatusCode": 200
-      }
-    ]
+    "ReturnTypes": []
   },
   {
     "ContainingType": "BookingApi.Controllers.AuthController",
@@ -55,40 +45,20 @@
         "IsRequired": true
       }
     ],
-    "ReturnTypes": [
-      {
-        "Type": "BookingApi.DTOs.AuthResponse",
-        "MediaTypes": [
-          "text/plain",
-          "application/json",
-          "text/json"
-        ],
-        "StatusCode": 200
-      }
-    ]
+    "ReturnTypes": []
   },
   {
-    "ContainingType": "BookingApi.Controllers.BookingsController",
+    "ContainingType": "BookingsController",
     "Method": "GetAll",
     "RelativePath": "api/bookings",
     "HttpMethod": "GET",
     "IsController": true,
     "Order": 0,
     "Parameters": [],
-    "ReturnTypes": [
-      {
-        "Type": "System.Collections.Generic.List\u00601[[BookingApi.DTOs.BookingResponse, backend, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
-        "MediaTypes": [
-          "text/plain",
-          "application/json",
-          "text/json"
-        ],
-        "StatusCode": 200
-      }
-    ]
+    "ReturnTypes": []
   },
   {
-    "ContainingType": "BookingApi.Controllers.BookingsController",
+    "ContainingType": "BookingsController",
     "Method": "Create",
     "RelativePath": "api/bookings",
     "HttpMethod": "POST",
@@ -101,20 +71,10 @@
         "IsRequired": true
       }
     ],
-    "ReturnTypes": [
-      {
-        "Type": "BookingApi.DTOs.BookingResponse",
-        "MediaTypes": [
-          "text/plain",
-          "application/json",
-          "text/json"
-        ],
-        "StatusCode": 200
-      }
-    ]
+    "ReturnTypes": []
   },
   {
-    "ContainingType": "BookingApi.Controllers.BookingsController",
+    "ContainingType": "BookingsController",
     "Method": "GetById",
     "RelativePath": "api/bookings/{id}",
     "HttpMethod": "GET",
@@ -127,22 +87,12 @@
         "IsRequired": true
       }
     ],
-    "ReturnTypes": [
-      {
-        "Type": "BookingApi.DTOs.BookingResponse",
-        "MediaTypes": [
-          "text/plain",
-          "application/json",
-          "text/json"
-        ],
-        "StatusCode": 200
-      }
-    ]
+    "ReturnTypes": []
   },
   {
-    "ContainingType": "BookingApi.Controllers.BookingsController",
+    "ContainingType": "BookingsController",
     "Method": "Cancel",
-    "RelativePath": "api/bookings/Cancelled/{id}",
+    "RelativePath": "api/bookings/cancel/{id}",
     "HttpMethod": "PUT",
     "IsController": true,
     "Order": 0,
@@ -156,33 +106,7 @@
     "ReturnTypes": []
   },
   {
-    "ContainingType": "BookingApi.Controllers.BookingsController",
-    "Method": "GetAll",
-    "RelativePath": "api/bookings/filter",
-    "HttpMethod": "GET",
-    "IsController": true,
-    "Order": 0,
-    "Parameters": [
-      {
-        "Name": "resourceId",
-        "Type": "System.Nullable\u00601[[System.Int32, System.Private.CoreLib, Version=10.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]",
-        "IsRequired": false
-      }
-    ],
-    "ReturnTypes": [
-      {
-        "Type": "System.Collections.Generic.List\u00601[[BookingApi.DTOs.BookingResponseUser, backend, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
-        "MediaTypes": [
-          "text/plain",
-          "application/json",
-          "text/json"
-        ],
-        "StatusCode": 200
-      }
-    ]
-  },
-  {
-    "ContainingType": "BookingApi.Controllers.BookingsController",
+    "ContainingType": "BookingsController",
     "Method": "UpdateStatus",
     "RelativePath": "api/bookings/status/{id}",
     "HttpMethod": "PUT",
@@ -383,22 +307,6 @@
         "StatusCode": 200
       }
     ]
-  },
-  {
-    "ContainingType": "BookingApi.Controllers.UsersController",
-    "Method": "Deactivate",
-    "RelativePath": "api/users/{id}/deactivate",
-    "HttpMethod": "PUT",
-    "IsController": true,
-    "Order": 0,
-    "Parameters": [
-      {
-        "Name": "id",
-        "Type": "System.Int32",
-        "IsRequired": true
-      }
-    ],
-    "ReturnTypes": []
   },
   {
     "ContainingType": "BookingApi.Controllers.UsersController",

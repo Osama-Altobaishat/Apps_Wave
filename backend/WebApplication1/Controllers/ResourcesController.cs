@@ -1,10 +1,7 @@
 using System.Security.Claims;
-using BookingApi.Data;
 using BookingApi.DTOs;
-using BookingApi.Models;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
-using Microsoft.EntityFrameworkCore;
 
 namespace BookingApi.Controllers;
 
@@ -13,121 +10,84 @@ namespace BookingApi.Controllers;
 [Authorize]
 public class ResourcesController : ControllerBase
 {
-    private readonly AppDbContext _db;
+    private readonly IResourceService _service;
 
-    public ResourcesController(AppDbContext db)
+    public ResourcesController(IResourceService service)
     {
-        _db = db;
+        _service = service;
     }
 
-    // Admin get Resource
     [HttpGet("dashboard")]
     [Authorize(Roles = "Admin")]
     public async Task<ActionResult<List<ResourceResponse>>> GetAll([FromQuery] bool onlyActive = true)
     {
-        var query = _db.Resources.AsQueryable();
-        if (onlyActive) query = query.Where(r => r.IsActive);
-
-        var resources = await query
-            .Select(r => new ResourceResponse(
-                r.Id, r.Name, r.Description,
-                r.IsActive, r.CreatedByUserId, r.CreatedAt))
-            .ToListAsync();
-
-        return Ok(resources);
+        var result = await _service.GetAllAsync(onlyActive);
+        return Ok(result);
     }
 
     [HttpGet("User")]
     [Authorize(Roles = "User")]
     public async Task<ActionResult<List<ResourceResponseUser>>> GetResourcesUser([FromQuery] bool onlyActive = true)
     {
-        var query = _db.Resources.AsQueryable();
-        if (onlyActive) query = query.Where(r => r.IsActive);
-
-        var resources = await query
-            .Select(r => new ResourceResponseUser(
-                r.Id, r.Name, r.Description))
-            .ToListAsync();
-
-        return Ok(resources);
+        var result = await _service.GetForUserAsync(onlyActive);
+        return Ok(result);
     }
 
-
-
-    // Admin Find Resource
     [HttpGet("{id:int}")]
     [Authorize(Roles = "Admin")]
     public async Task<ActionResult<ResourceResponse>> GetById(int id)
     {
-        var r = await _db.Resources.FindAsync(id);
-        if (r is null) return NotFound();
+        var result = await _service.GetByIdAsync(id);
 
-        return Ok(new ResourceResponse(
-            r.Id, r.Name, r.Description,
-            r.IsActive, r.CreatedByUserId, r.CreatedAt));
+        if (result == null)
+            return NotFound();
+
+        return Ok(result);
     }
 
-    // Admin Create Resource
     [HttpPost]
     [Authorize(Roles = "Admin")]
     public async Task<ActionResult<ResourceResponse>> Create(CreateResourceRequest request)
     {
         var userId = int.Parse(User.FindFirstValue(ClaimTypes.NameIdentifier)!);
 
-        var resource = new Resource
-        {
-            Name = request.Name,
-            Description = request.Description,
-            CreatedByUserId = userId
-        };
+        var result = await _service.CreateAsync(userId, request);
 
-        _db.Resources.Add(resource);
-        await _db.SaveChangesAsync();
-
-        var response = new ResourceResponse(
-            resource.Id, resource.Name, resource.Description, resource.IsActive, resource.CreatedByUserId, resource.CreatedAt);
-
-        return CreatedAtAction(nameof(GetById), new { id = resource.Id }, response);
+        return CreatedAtAction(nameof(GetById), new { id = result.Id }, result);
     }
-    // Admin Update Resource
+
     [HttpPut("{id:int}")]
     [Authorize(Roles = "Admin")]
     public async Task<IActionResult> Update(int id, UpdateResourceRequest request)
     {
-        var resource = await _db.Resources.FindAsync(id);
-        if (resource is null) return NotFound();
+        var result = await _service.UpdateAsync(id, request);
 
-        resource.Name = request.Name;
-        resource.Description = request.Description;
-        resource.IsActive = request.IsActive;
+        if (!result)
+            return NotFound();
 
-        await _db.SaveChangesAsync();
         return NoContent();
     }
 
-    // Admin Delete Resource
     [HttpDelete("{id:int}")]
     [Authorize(Roles = "Admin")]
     public async Task<IActionResult> Delete(int id)
     {
-        var resource = await _db.Resources.FindAsync(id);
-        if (resource is null) return NotFound();
+        var result = await _service.DeleteAsync(id);
 
-        _db.Resources.Remove(resource);
-        await _db.SaveChangesAsync();
+        if (!result)
+            return NotFound();
+
         return NoContent();
     }
+
     [HttpPut("active/{id:int}")]
     [Authorize(Roles = "Admin")]
     public async Task<IActionResult> UpdateActiveStatus(int id, UpdateActiveStatusRequest request)
     {
-        var resource = await _db.Resources.FindAsync(id);
-        if (resource is null)
+        var result = await _service.UpdateActiveStatusAsync(id, request.IsActive);
+
+        if (!result)
             return NotFound();
-
-        resource.IsActive = request.IsActive;
-
-        await _db.SaveChangesAsync();
 
         return NoContent();
     }
